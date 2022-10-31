@@ -54,4 +54,23 @@ public class CustomListTest {
         list.deleteCity(newCity);
         assertFalse(list.hasCity(newCity));
     }
+    /**
+     * this adds 3 cities to the list
+     * checks if there are 3 cities in the list
+     */
+    @Test
+    public void countCitiesTest(){
+        City newCity1 = new City("Vancouver", "BC");
+        City newCity2 = new City("Edmonton", "AB");
+        City newCity3 = new City("Calgary", "AB");
+
+        list.addCity(newCity1);
+        list.addCity(newCity2);
+        list.addCity(newCity3);
+
+        int count = list.countCities();
+
+        assertEquals(3, count);
+
+    }
 }
